@@ -1,0 +1,15 @@
+<ul class="comment-list">
+  <h2>Comments...</h2>
+  <% if(article.comments.length) { %>
+    <% article.comments.forEach((comment)=>{ %>
+      <li class="single-comment-list">
+        <h3><%=comment%></h3>
+        <div>
+          <a href="/articles/<%=article._id%>/delete/comment">Delete</a>
+        </div>
+      </li>
+    <% }) %>
+  <% } else { %>
+      <h2>No any comment</h2>
+  <% } %>
+</ul>
